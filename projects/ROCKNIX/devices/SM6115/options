@@ -28,7 +28,7 @@
     KERNEL_MAKE_EXTRACMD=" $(get_kernel_make_extracmd)"
 
   # Kernel cmdline
-    EXTRA_CMDLINE="rootwait quiet video=efifb:off console=tty0 gpt ssbd=force-off kpti=off"
+    EXTRA_CMDLINE="rootwait quiet video=efifb:off console=tty0 gpt ssbd=force-off kpti=off cgroup.memory=nokmem,nosocket"
 
   # Bootloader to use (syslinux / u-boot)
     BOOTLOADER="qcom-abl"
@@ -63,7 +63,7 @@
   # Additional Firmware to use ( )
   # Space separated list is supported,
   # e.g. FIRMWARE=""
-    FIRMWARE="extra-firmware"
+    FIRMWARE="extra-firmware mangmi-airy-firmware"
 
   # Additional packages to install
     ADDITIONAL_PACKAGES="gamepadcalibration rocknix-abl inputplumber pd-mapper rmtfs tqftpserv"
